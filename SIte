@@ -1,231 +1,99 @@
-export default function PrimeVizSite() {
-  const portfolio = [
-    {
-      title: "Interiores Premium",
-      image: "/portfolio/interior-01.jpg",
-    },
-    {
-      title: "Renderização Arquitetônica",
-      image: "/portfolio/interior-02.jpg",
-    },
-    {
-      title: "Empreendimentos Imobiliários",
-      image: "/portfolio/empreendimento-01.jpg",
-    },
-    {
-      title: "Visualização Externa",
-      image: "/portfolio/empreendimento-02.jpg",
-    },
-  ];
-
-  return (
-    <div className="bg-[#0B0B0B] text-white min-h-screen">
-      {/* HERO */}
-      <section className="relative h-screen overflow-hidden">
-        <img
-          src="/hero.jpg"
-          alt="PrimeViz"
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
-          <div className="max-w-3xl">
-            <img
-              src="/logo-primeviz.png"
-              alt="PrimeViz"
-              className="h-24 mb-8"
-            />
-
-            <p className="text-cyan-300 uppercase tracking-[0.3em] text-sm mb-4">
-              Visualização Arquitetônica
-            </p>
-
-            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-              Transformamos projetos em experiências visuais.
-            </h1>
-
-            <p className="text-xl text-zinc-300 mb-10 leading-relaxed">
-              Renderizações realistas, modelagem 3D e materiais de venda para
-              empreendimentos imobiliários e arquitetura de alto padrão.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://instagram.com/prime.viz"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-cyan-400 text-black px-8 py-4 rounded-2xl font-bold hover:bg-cyan-300 transition"
-              >
-                Ver Portfólio
-              </a>
-
-              <a
-                href="https://w.app/kwyiax"
-                target="_blank"
-                rel="noreferrer"
-                className="border border-white/20 px-8 py-4 rounded-2xl font-semibold hover:border-cyan-300 transition"
-              >
-                Solicitar Orçamento
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SERVIÇOS */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-cyan-300 uppercase tracking-[0.3em] mb-4 text-sm">
-            Serviços
-          </p>
-
-          <h2 className="text-5xl font-bold">
-            Soluções Visuais de Alto Impacto
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
-            <h3 className="text-2xl font-bold mb-4">Renderização 3D</h3>
-            <p className="text-zinc-400">
-              Imagens ultra realistas para apresentações de alto padrão.
-            </p>
-          </div>
-
-          <div className="bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
-            <h3 className="text-2xl font-bold mb-4">Modelagem 3D</h3>
-            <p className="text-zinc-400">
-              Precisão técnica e fidelidade ao projeto arquitetônico.
-            </p>
-          </div>
-
-          <div className="bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
-            <h3 className="text-2xl font-bold mb-4">Material de Venda</h3>
-            <p className="text-zinc-400">
-              Apresentações comerciais, folders e conteúdo visual para vendas.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* PORTFÓLIO */}
-      <section className="bg-zinc-950 py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
-            <p className="text-cyan-300 uppercase tracking-[0.3em] text-sm mb-4">
-              Portfólio
-            </p>
-
-            <h2 className="text-5xl font-bold">
-              Projetos desenvolvidos pela PrimeViz
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {portfolio.map((item, index) => (
-              <div
-                key={index}
-                className="overflow-hidden rounded-3xl border border-zinc-800 group"
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-[500px] object-cover group-hover:scale-105 transition duration-700"
-                />
-
-                <div className="p-6 bg-zinc-900">
-                  <h3 className="text-2xl font-bold">{item.title}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SOBRE */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-cyan-300 uppercase tracking-[0.3em] mb-4 text-sm">
-            Sobre a PrimeViz
-          </p>
-
-          <h2 className="text-5xl font-bold mb-8">
-            Apresentações que valorizam empreendimentos.
-          </h2>
-
-          <p className="text-zinc-400 text-xl leading-relaxed">
-            A PrimeViz é especializada em visualização arquitetônica,
-            renderizações ultra realistas, modelagem 3D e criação de materiais
-            comerciais para incorporadoras, construtoras e arquitetos.
-          </p>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto bg-cyan-400 rounded-[40px] p-16 text-center text-black">
-          <h2 className="text-5xl font-black mb-6">
-            Seu empreendimento merece uma apresentação memorável.
-          </h2>
-
-          <p className="text-xl mb-10">
-            Entre em contato e transforme seu projeto em uma experiência visual
-            de alto padrão.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://w.app/kwyiax"
-              target="_blank"
-              rel="noreferrer"
-              className="bg-black text-white px-8 py-4 rounded-2xl font-bold"
-            >
-              Solicitar Orçamento
-            </a>
-
-            <a
-              href="https://instagram.com/prime.viz"
-              target="_blank"
-              rel="noreferrer"
-              className="border border-black/20 px-8 py-4 rounded-2xl font-bold"
-            >
-              @prime.viz
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="border-t border-zinc-800 py-10 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div>
-            <h3 className="text-2xl font-black">PrimeViz</h3>
-            <p className="text-zinc-500">
-              Visualização Arquitetônica
-            </p>
-          </div>
-
-          <div className="flex gap-6">
-            <a
-              href="https://instagram.com/prime.viz"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-
-            <a
-              href="https://w.app/kwyiax"
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>PrimeViz</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:#0b0b0b;color:#fff;overflow-x:hidden}
+header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(0,0,0,.75);backdrop-filter:blur(10px)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 5%}
+.hero{height:100vh;background:url('hero.jpg') center/cover fixed;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero:before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.hero-content{position:relative;z-index:2;animation:fadeUp 1s ease}
+h1{font-size:clamp(2.5rem,6vw,5rem)}
+.btn{background:#19b7e3;padding:15px 30px;border-radius:40px;color:#fff;text-decoration:none;display:inline-block;margin-top:20px;transition:.3s}
+.btn:hover{transform:translateY(-3px)}
+section{padding:100px 5%}
+.section-title{text-align:center;font-size:2.5rem;margin-bottom:50px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px}
+.card{overflow:hidden;border-radius:22px;background:#141414;transition:.4s}
+.card img{width:100%;height:320px;object-fit:cover;transition:.6s}
+.card:hover img{transform:scale(1.08)}
+.card:hover{transform:translateY(-8px)}
+.parallax{background:url('parallax.jpg') center/cover fixed;height:50vh;display:flex;align-items:center;justify-content:center;text-align:center}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.testimonial{background:#151515;padding:30px;border-radius:20px}
+footer{text-align:center;padding:40px;background:#000}
+.reveal{opacity:0;transform:translateY(40px);transition:1s}
+.reveal.active{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@media(max-width:768px){
+nav{padding:15px}
+.hero{background-attachment:scroll}
+.parallax{background-attachment:scroll}
+.gallery{grid-template-columns:1fr}
+h1{font-size:2.3rem}
 }
+</style>
+</head>
+<body>
+<header>
+<nav>
+<h2>PrimeViz</h2>
+<a href="https://w.app/kwyiax" class="btn">WhatsApp</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Visualização Arquitetônica Extraordinária</h1>
+<p>Imagens que vendem projetos antes mesmo de serem construídos.</p>
+<a href="https://w.app/kwyiax" class="btn">Solicitar orçamento</a>
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="section-title">Portfólio</h2>
+<div class="gallery">
+<div class="card"><img src="img1.jpg"></div>
+<div class="card"><img src="img2.jpg"></div>
+<div class="card"><img src="img3.jpg"></div>
+<div class="card"><img src="img4.jpg"></div>
+<div class="card"><img src="img5.jpg"></div>
+<div class="card"><img src="img6.jpg"></div>
+</div>
+</section>
+
+<section class="parallax">
+<div>
+<h2 style="font-size:3rem">Detalhes que impressionam</h2>
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="section-title">O que nossos clientes dizem</h2>
+<div class="testimonials">
+<div class="testimonial">“Qualidade impressionante. As imagens ajudaram a fechar vendas.”</div>
+<div class="testimonial">“Entrega rápida e nível visual acima do esperado.”</div>
+<div class="testimonial">“Os renders elevaram completamente a apresentação do empreendimento.”</div>
+</div>
+</section>
+
+<section style="text-align:center" class="reveal">
+<h2 class="section-title">Vamos criar algo incrível?</h2>
+<a href="https://w.app/kwyiax" class="btn">Falar no WhatsApp</a>
+</section>
+
+<footer>© PrimeViz</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active')})
+});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
